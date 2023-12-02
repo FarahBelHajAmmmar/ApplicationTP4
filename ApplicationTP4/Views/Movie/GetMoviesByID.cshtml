@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Movies>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Movie Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp_controller="Movie" asp-action="Index">Back</a>

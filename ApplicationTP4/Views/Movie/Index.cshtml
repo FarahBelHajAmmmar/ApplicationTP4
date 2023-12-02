@@ -1,0 +1,29 @@
+﻿@model Genres
+
+@{
+    ViewBag.Title = "Movies";
+}
+<h2>@ViewBag.Title</h2>
+
+<h2>Select Genre </h2>
+
+<form asp-action="GetMoviesByGenre" method="get">
+    <div class="form-group">
+        <label for="GenreName">Genre Name:</label>
+        <input type="text" name="GenreName" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Get Movies</button>
+    
+</form>
+
+<h2>Select Genre ID</h2>
+<form asp-action="GetMoviesByID" method="get">
+    <div class="form-group">
+        <label for="Id">Genre Id</label>
+        <input type="text" name="Id" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Get Movies By genre ID</button>
+</form>
+
+
+<a asp-controller="Movie" asp-action="GetMovieord">Display the movies in ascending order</a>
